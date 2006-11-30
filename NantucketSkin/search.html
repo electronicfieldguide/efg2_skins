@@ -1,0 +1,745 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1">
+<head>
+<title>EFG Search</title>
+<link type="text/css" rel="stylesheet" href="nantucket.css" />
+<script language="JavaScript" type="text/javascript">
+<!-- // -->
+//handle other checkboxes that are not the 'any' checkbox
+//if the any checkbox field is checked then uncheck the 'any' checkbox
+//otherwise check the 'any' checkbox
+
+function evalOtherCheckBoxes(field)
+{
+    if(isFieldChecked(field)){
+        field[0].checked = false;
+    }
+    else{
+            field[0].checked = true ;
+    }
+}
+//if some checkBox other than the 'any' checkbox is checked
+//then uncheck them and check the 'any' check box
+//otherwise just check the 'any' checkbox
+//means that if user try's to uncheck the 'any' checkbox if nothing is selected it will not be deselected
+function evalAnyCheckBox(field)
+{
+
+ if(isFieldChecked(field)){
+           for (i = 1; i < field.length; i++){
+            if(field[i].checked){
+                field[i].checked = false;
+            }
+        }
+    }
+    field[0].checked = true;
+}
+// Find out that if any check box but the 'any' checkbox is selected
+
+function isFieldChecked(field){
+    checked = false;
+    for (i = 1; i < field.length; i++){
+        if(field[i].checked){
+            checked = true;
+        }
+    }
+    return checked;
+}
+function isFieldSelected(field){
+    var selected = false;
+    for (i = 1; i < field.length; i++){
+    if(field.options[i].selected == true){
+        selected = true;
+    }
+    }
+    return selected;
+}
+function evalAnySelectedValue(field)
+{ 
+  
+    if(isFieldSelected(field)){
+    field.options[0].selected = false;
+    }
+    else{
+    field.options[0].selected  = true;
+    }
+   
+}
+function toggleDisplayFormat(field,idVar){
+   var selectedIndex = field.selectedIndex;
+   var other = document.getElementById(idVar);
+   other.options[selectedIndex] .selected= true;
+}
+function toggleMax(field,idVar){
+   var text = field.value;
+   var other = document.getElementById(idVar);
+   other.value = text;
+}
+</script>
+</head>
+<body class="search">
+<p class="searchtitle">Search the EFG</p>
+
+<p class="instruct">Select options from any of the categories below, then click "Search" at the bottom of the page.<br />
+<br />
+Selecting more than one option in a category will search for either characteristic (i.e. either "pink" or "white" flowers).<br />
+To select more than one option in a scrolling menu, hold down the Ctrl key on a PC (Command key on a Mac) when you click the mouse button.</p>
+
+<form method="post" action="/efg2/Redirect.jsp" name="myform"><input type="hidden" name="displayName" value="invasives" /> <input type="hidden" name="displayFormat" value="HTML" /> <input type=
+"hidden" name="dataSourceName" value="NantucketSppPgs_1149868625336" /> 
+
+<table class="search">
+<tr>
+<td class="submitsearch"><span class="searchdisplay">Display results as: <select name="searchType" size="1" id="firstSelect" onchange="toggleDisplayFormat(this,lastSelect);" onkeyup= 
+"toggleDisplayFormat(this,lastSelect);">
+<option value="plates">Thumbnails</option>
+<option value="lists">Text List</option>
+</select></span> <span class="searchmatches">Maximum Matches: <input type="text" size="4" id="firstMatch" name="maxDisplay" value="70" onchange="toggleMax(this,lastMatch);" onkeyup= 
+"toggleMax(this,lastMatch);" /></span> <span class="search"><input type="submit" value="Search" /></span> <span class="clear"><input type="reset" value="Clear all" /></span></td>
+</tr>
+</table>
+
+<table class="searchmodule">
+<tr>
+<th class="search">Group 1 
+<!-- Each block of search categories can have as many as 4, or as few as 1. The number of blocks on the template should be determined by the formula (number of searchable fields)/3 to give the author some wiggle room, but the template should display 4 blank fields in each block --></th>
+</tr>
+
+<tr>
+<td class="paddertopleft"></td>
+<td class="paddertopright"></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="genus" size="5" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Acer
+                   
+</option>
+<option>Achillea
+                   
+</option>
+<option>Aegopodium
+                   
+</option>
+<option>Ailanthus
+                   
+</option>
+<option>Akebia
+                   
+</option>
+<option>Alliaria
+                   
+</option>
+<option>Ampelopsis
+                   
+</option>
+<option>Berberis
+                   
+</option>
+<option>Celastrus
+                   
+</option>
+<option>Centaurea
+                   
+</option>
+<option>Chelidonium
+                   
+</option>
+<option>Cichorium
+                   
+</option>
+<option>Cirsium
+                   
+</option>
+<option>Coreopsis
+                   
+</option>
+<option>Coronilla
+                   
+</option>
+<option>Cynanchum
+                   
+</option>
+<option>Cytisus
+                   
+</option>
+<option>Datura
+                   
+</option>
+<option>Daucus
+                   
+</option>
+<option>Elaeagnus
+                   
+</option>
+<option>Epilobium
+                   
+</option>
+<option>Erodium
+                   
+</option>
+<option>Euonymus
+                   
+</option>
+<option>Euphorbia
+
+</option>
+</select></td>
+</tr>
+
+<tr class="section">
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="family" size="5" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Aceraceae
+                   
+</option>
+<option>Apiaceae
+                   
+</option>
+<option>Apocynaceae
+                   
+</option>
+<option>Araliaceae
+                   
+</option>
+<option>Asclepiadaceae
+                   
+</option>
+<option>Asteraceae
+                   
+</option>
+<option>Berberidaceae
+                   
+</option>
+<option>Boraginaceae
+                   
+</option>
+<option>Brassicaceae
+                   
+</option>
+<option>Caprifoliaceae
+                   
+</option>
+<option>Celastraceae
+                   
+</option>
+<option>Clusiaceae
+                   
+</option>
+<option>Elaeagnaceae
+                   
+</option>
+<option>Euphorbiaceae
+                   
+</option>
+<option>Fabaceae
+                   
+</option>
+<option>Geraniaceae
+                   
+</option>
+<option>Iridaceae
+                   
+</option>
+<option>Lamiaceae
+                   
+</option>
+<option>Lardizabalaceae
+                   
+</option>
+<option>Liliaceae
+
+</option>
+</select></td>
+</tr>
+
+<tr class="section">
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="common_Name" size="5" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Autumn Olive
+                   
+</option>
+<option>Bittersweet Nightshade
+                   
+</option>
+<option>Black Locust
+                   
+</option>
+<option>Black Swallow-wort
+                   
+</option>
+<option>Black-eyed Susan
+                   
+</option>
+<option>Border Privet
+                   
+</option>
+<option>Bull Thistle
+                   
+</option>
+<option>Burning Bush
+                   
+</option>
+<option>Butter-and-eggs
+                   
+</option>
+<option>California Privet
+                   
+</option>
+<option>Cat's Ear
+                   
+</option>
+<option>Celandine
+                   
+</option>
+<option>Chicory
+                   
+</option>
+<option>Coltsfoot
+                   
+</option>
+<option>Common Mullein
+                   
+</option>
+<option>Common Reed
+                   
+</option>
+<option>Common St. John's Wort
+                   
+</option>
+<option>Creeping Buttercup
+                   
+</option>
+<option>Crown Vetch
+                   
+</option>
+<option>Cypress Spurge
+                   
+</option>
+<option>Daffodil
+                   
+</option>
+<option>Dame's Rocket
+                   
+</option>
+<option>English Ivy
+                   
+</option>
+<option>English Plantain
+                   
+</option>
+<option>Five-leaf Akebia
+                   
+</option>
+<option>Garlic Mustard
+                   
+</option>
+<option>Gill-over-the-ground
+                   
+</option>
+<option>Glossy Buckthorn
+                   
+</option>
+<option>Goutweed
+                   
+</option>
+<option>Hairy Willow-herb
+                   
+</option>
+<option>Horned Poppy
+                   
+</option>
+<option>Japanese Barberry
+                   
+</option>
+<option>Japanese Black Pine
+                   
+</option>
+<option>Japanese Honeysuckle
+                   
+</option>
+<option>Japanese Knotweed
+                   
+</option>
+<option>Japanese Stilt Grass
+                   
+</option>
+<option>Jimsonweed
+
+</option>
+</select></td>
+</tr>
+
+<tr class="section">
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="ORIGIN" size="5" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Africa
+                   
+</option>
+<option>Asia
+                   
+</option>
+<option>British Isles
+                   
+</option>
+<option>Central America
+                   
+</option>
+<option>Central Asia
+                   
+</option>
+<option>Central Europe
+                   
+</option>
+<option>Central United States
+                   
+</option>
+<option>China
+                   
+</option>
+<option>East Asia
+                   
+</option>
+<option>Eastern Asia
+                   
+</option>
+<option>Europe
+                   
+</option>
+<option>Europe; Mediterranean
+                   
+</option>
+<option>Great Britain
+                   
+</option>
+<option>Japan
+                   
+</option>
+<option>Korea
+                   
+</option>
+<option>Lower Northeastern United States
+                   
+</option>
+<option>Mediterranean region
+                   
+</option>
+<option>Mexico
+                   
+</option>
+<option>Middle East
+                   
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="padderbottomleft"></td>
+<td class="padderbottomright"></td>
+</tr>
+
+<tr>
+<td class="spacer"></td>
+</tr>
+
+<tr>
+<th class="search">Group 2</th>
+</tr>
+
+<tr>
+<td class="paddertopleft"></td>
+<td class="paddertopright"></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="degree_of_invasiveness_on_Nantucket" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Intermediate Invasive
+                   
+</option>
+<option>Invasive
+                   
+</option>
+<option>Likely Invasive
+                   
+</option>
+<option>Potential Invasive
+                   
+</option>
+<option>Roadside Weed
+                   
+</option>
+<option>Watchlist
+                   
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="degree_of_invasiveness_in_Massachusetts" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Does not meet criteria
+                   
+</option>
+<option>Invasive
+                   
+</option>
+<option>Likely Invasive
+                   
+</option>
+<option>Not evaluated
+                   
+
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="prohibited_in_Massachusetts_" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>importation ban
+                   
+</option>
+<option>importation ban July 2006
+                   
+</option>
+<option>no
+                   
+</option>
+<option>propagation ban
+                   
+</option>
+<option>propagation ban January 2007
+                   
+</option>
+<option>propagation ban January 2009
+                   
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="DISPERSAL_VECTORS__SYN_" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>birds
+                   
+</option>
+<option>gardening and landscaping
+                   
+</option>
+<option>hay contaminant
+                   
+</option>
+<option>insects
+                   
+</option>
+<option>machinery
+                   
+</option>
+<option>mammals
+                   
+</option>
+<option>self-dispersed
+                   
+</option>
+<option>soil disturbance
+                   
+</option>
+<option>water
+                   
+</option>
+<option>wind
+                   
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="padderbottomleft"></td>
+<td class="padderbottomright"></td>
+</tr>
+
+<tr>
+<td class="spacer"></td>
+</tr>
+
+<tr>
+<th class="search">Group 3</th>
+</tr>
+
+<tr>
+<td class="paddertopleft"></td>
+<td class="paddertopright"></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="growth_Form" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Grass
+                   
+</option>
+<option>Herb
+                   
+</option>
+<option>Shrub
+                   
+</option>
+<option>Tree
+                   
+</option>
+<option>Vine
+                   
+
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="flower_Color__SYN_" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Blue
+                   
+</option>
+<option>Brown
+                   
+</option>
+<option>Green
+                   
+</option>
+<option>Orange
+                   
+</option>
+<option>Pink
+                   
+</option>
+<option>Purple
+                   
+</option>
+<option>Red
+                   
+</option>
+<option>White
+                   
+</option>
+<option>Yellow
+                   
+
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="petal_Number__SYN_" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>2
+                   
+</option>
+<option>3
+                   
+</option>
+<option>4
+                   
+</option>
+<option>5
+                   
+</option>
+<option>6
+                   
+</option>
+<option>7
+                   
+</option>
+<option>8
+                   
+</option>
+<option>more than 10
+                   
+</option>
+<option>no petals
+                   
+
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="fruit_Color__SYN_" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Black
+                   
+</option>
+<option>Blue
+                   
+</option>
+<option>Brown
+                   
+</option>
+<option>Green
+                   
+</option>
+<option>Orange
+                   
+</option>
+<option>Pink
+                   
+</option>
+<option>Purple
+                   
+</option>
+<option>Red
+                   
+</option>
+<option>White
+                   
+</option>
+<option>Yellow
+                   
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="padderbottomleft"></td>
+<td class="padderbottomright"></td>
+</tr>
+
+<tr>
+<td class="spacer"></td>
+</tr>
+</table>
+
+<table class="search">
+<tr>
+<td class="submitsearch"><span class="searchdisplay">Display results as: <select name="searchType" size="1" id="lastSelect" onchange="toggleDisplayFormat(this,firstSelect);" onkeyup= 
+"toggleDisplayFormat(this,firstSelect);">
+<option value="plates">Thumbnails</option>
+<option value="lists">Text List</option>
+</select></span> <span class="searchmatches">Maximum Matches: <input type="text" id="lastMatch" size="4" name="maxDisplay" value="70" onchange="toggleMax(this,firstMatch);" onkeyup= 
+"toggleMax(this,firstMatch);" /></span> <span class="search"><input type="submit" value="Search" /></span> <span class="clear"><input type="reset" value="Clear all" /></span></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
