@@ -288,14 +288,14 @@ border-bottom-color: darkblue;
 td.spacer {
 height: 25px;
 }
-dl.alphaheader {
+dt.alphaheader {
 font-family: arial, helvetica, verdana;
 font-size: 12pt;
 font-weight: bold;
 color: darkblue;
 text-align: left;
 border-bottom: solid 1px darkblue;
-padding-left: 10px;
+padding-left: 0px;
 }
 dl.glossary {
 font-family: arial, helvetica, verdana;
@@ -311,7 +311,7 @@ font-size: 9pt;
 font-weight: bold;
 color: #000000;
 text-align: left;
-padding-left: 10px;
+padding-left: 0px;
 }
 dd.glossary {
 font-family: arial, helvetica, verdana;
@@ -319,6 +319,13 @@ font-size: 9pt;
 font-weight: normal;
 color: #000000;
 padding-left: 10px;
+}
+dl.topofpage {
+font-family: arial, helvetica, verdana;
+font-size: 8pt;
+font-weight: normal;
+text-align: right;
+color: darkblue;
 }
 a.about {
 color: #000000;
@@ -353,6 +360,24 @@ background-color: #3F62BE;
 font-family: helvetica, verdana, arial;
 font-size: 10pt;
 text-align: left;
+text-decoration: none;
+}
+a.topofpage {
+font-family: arial, helvetica, verdana;
+font-size: 8pt;
+font-weight: normal;
+text-align: right;
+color: darkblue;
+background-color: #DDEEFF;
+text-decoration: none;
+}
+a.topofpage:hover {
+font-family: arial, helvetica, verdana;
+font-size: 8pt;
+font-weight: normal;
+text-align: right;
+color: darkblue;
+background-color: #DDEEFF;
 text-decoration: none;
 }
 ul.about {
