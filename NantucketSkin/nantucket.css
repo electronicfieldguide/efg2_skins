@@ -527,8 +527,68 @@ p.instruct {
 }
 .clear {
 }
-
 /* style code for Search page ends here */
+
+/* style code for Search Results starts here */
+table.resultsdisplay {
+	border: 0px;
+	border-collapse: collapse;
+	margin: 0px;
+}
+td.resultsthumb {
+	vertical-align: bottom;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	text-align: center;
+	border-left: 16px solid #DDEEFF;
+	border-right: 16px solid #DDEEFF;
+}
+td.resultscaption {
+	font-family: arial, helvetica, sans;
+	color: #00008B;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 4px;
+	text-align: center;
+	margin-right: 0px;
+	font-size: 12px;
+	background-color: #fff;
+	border-left: 16px solid #DDEEFF;
+	border-right: 16px solid #DDEEFF;
+	border-bottom: 8px solid #DDEEFF;
+}
+td.rowspacer {
+	height: 20px;	
+}
+a.thumbnail:hover {
+	border: 1px;
+}
+a.resultscaption {
+	color: #00008B;
+	background-color: #ffffff;
+}
+a.resultscaption:hover {
+	color: #00008B;
+	background-color: #ffffff;
+	text-decoration: underline;
+}
+#numresults {
+	font-family: arial, helvetica, sans;
+	color: #00008B;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #00008B;
+	margin-bottom: 10px;
+}
+.num {
+	background-color: #00008B;
+	color: #ffffff;
+	padding: 2px;
+	font-weight: bold;
+}
+/* style code for Search Results page ends here */
 
 /* style code for List pages starts here */
 table.header {
