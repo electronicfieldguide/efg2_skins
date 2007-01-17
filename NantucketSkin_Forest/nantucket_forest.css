@@ -547,6 +547,14 @@ table.specieslist {
 	  border-collapse: collapse; 
 	  border: 0px;
 }
+table.pagenum {
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	border: 0px;
+	border-top: 2px solid #485C37;
+	margin-top: 30px;
+}
 td.descrip {
 	  color: #485C37;
 	  font-family: helvetica, verdana, arial;
@@ -576,6 +584,9 @@ td.sciheader {
 	   border-bottom-color: #000000;
 	   border-bottom-width: 1px;
 }
+td.spacerheight {
+   height: 10px;
+}
 td.commonname {
     color: #000000;
     font-family: helvetica, verdana, arial;
@@ -590,6 +601,39 @@ td.sciname {
     font-size: 10pt;
     padding-bottom: 7px;
     padding-right: 35px;
+}
+td.previous {
+   color: #336600;
+   font-family: helvetica, verdana, arial;
+   font-size: 9pt;
+   text-align: right;
+   width: 50%;
+   padding: 0px;
+   padding-top: 9px;
+   vertical-align: bottom;
+}
+td.next {
+   color: #336600;
+   font-family: helvetica, verdana, arial;
+   font-size: 9pt;
+   text-align: left;
+   width: 50%;
+   padding: 0px;
+   padding-top: 9px;
+   vertical-align: bottom;
+}
+td.pagenum {
+   font-family: helvetica, verdana, arial;
+   font-size: 10pt;
+   color: #000000;
+   margin: 0px;
+   padding-top: 10px;
+   padding-right: 8px;
+   padding-left: 8px;
+   padding-bottom: 0px;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: bottom;
 }
 a.commonname1st {
 	  color: #336600;
@@ -655,11 +699,24 @@ a.sciname1st:hover {
 	  text-decoration: underline;
 	  background-color: #F2F1E3;
 }
+a.prevnext {
+   color: #669900;
+   text-decoration: none;
+}
+a.prevnext:hover {
+   color: #669900;
+   text-decoration: underline;
+   background-color: #F2F1E3;
+}
 span.sciname {
 	   color: #000000;
 	   font-family: helvetica, verdana, arial;
 	   font-style: italic;
 	   font-size: 10pt;
+}
+span.pagenum {
+   color: #003300;
+   font-weight: bold;
 }
 /* style code for List pages ends here */
 
