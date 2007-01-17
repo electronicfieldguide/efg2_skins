@@ -703,7 +703,7 @@ table.taxoncredits {
 		background-color: #F2F1E3;
 		margin-left: 4px;
 }
-td.comname {
+td.comnametaxon {
 		border-style: none;
 		font-family: "Arial", Verdana, sans-serif;
 		font-weight: bold;
@@ -713,7 +713,7 @@ td.comname {
 		align: left;
 		text-align: left;
 }
-td.sciname {
+td.scinametaxon {
 		border-style: none;
 		font-family: "Times New Roman", Times, serif;						font-size:18pt;
 		padding:10px;
