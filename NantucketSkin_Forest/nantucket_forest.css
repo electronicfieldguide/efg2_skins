@@ -532,6 +532,69 @@ p.instruct {
 }
 /* style code for Search page ends here */
 
+/* style code for Search Results starts here */
+table.resultsdisplay {
+	border: 0px;
+	border-collapse: collapse;
+	margin: 0px;
+}
+td.resultsthumb {
+	vertical-align: bottom;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	text-align: center;
+	border-left: 16px solid #CECFC7;
+	border-right: 16px solid #CECFC7;
+}
+td.resultscaption {
+	font-family: arial, helvetica, sans;
+	color: #00008B;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 4px;
+	text-align: center;
+	margin-right: 0px;
+	font-size: 12px;
+	background-color: #F2F1E3;
+	border-left: 16px solid #CECFC7;
+	border-right: 16px solid #CECFC7;
+	border-bottom: 8px solid #CECFC7;
+}
+td.rowspacer {
+	height: 20px;	
+}
+a.thumbnail:hover {
+	border: 1px;
+}
+a.resultscaption {
+	color: #006633;
+	background-color: #F2F1E3;
+}
+a.resultscaption:hover {
+	color: #006633;
+	background-color: #F2F1E3;
+	text-decoration: underline;
+}
+#numresults {
+	font-family: arial, helvetica, sans;
+	font-weight: bold;
+	font-size: 15px;
+	color: #006633;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #3b7b49;
+	margin-bottom: 10px;
+}
+.num {
+	background-color: #3b7b49;
+	color: #F2F1E3;
+	padding: 2px;
+	font-weight: bold;
+}
+/* style code for Search Results page ends here */
+
 /* style code for List pages starts here */
 table.header {
 	  margin-left: 20px;
@@ -771,7 +834,7 @@ td.comnametaxon {
 }
 td.scinametaxon {
 		border-style: none;
-		font-family: "Times New Roman", Times, serif;						font-size:18pt;
+		font-family: "Times New Roman", Times, serif;				font-size:18pt;
 		padding:10px;
 		font-color: #000000;
 		align: left;
