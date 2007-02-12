@@ -109,7 +109,7 @@ font-family: arial, helvetica, verdana;
 font-size: 20pt;
 text-align: left;
 font-weight: bold;
-padding-bottom: 10px;
+padding-bottom: 0px;
 padding-top: 3px;
 padding-left: 3px;
 border-bottom: solid 0px #808080;
@@ -265,7 +265,7 @@ text-decoration: none;
 /* style code for Search page starts here */
 body.search {
 	font-family: arial, verdana, helvetica;
-	background-color: #202060;
+	background-color: #fff7da;
 	margin-left: 20px;
 }
 table.search {
@@ -295,7 +295,7 @@ td.submitsearch {
 	padding-bottom: 5px;
 	border-top: solid 2px #808080;
 	border-bottom: solid 2px #808080;
-	background-color: #e0e0e0;
+	background-color: #f6f6da;
 	color: #f0f0f0;
 }
 td.spacer {
@@ -307,54 +307,54 @@ td.padder {
 }
 td.paddertopleft {
 	height: 3px;
-	background-color: #a0c0e0;
+	background-color: #ab886e;
 	border-top : solid 1px #808080;
 	border-left : solid 1px #808080;
 }
 td.paddertopright {
 	height: 3px;
-	background-color: #a0c0e0;
-	border-top : solid 1px #808080;
-	border-right : solid 1px #808080;
+	background-color: #ab886e;
+	border-top : solid 1px #a0602c;
+	border-right : solid 1px #a0602c;
 }
 td.padderbottomleft {
 	height: 3px;
-	background-color: #a0c0e0;
-	border-bottom : solid 1px #808080;
-	border-left : solid 1px #808080;
+	background-color: #ab886e;
+	border-bottom : solid 1px #a0602c;
+	border-left : solid 1px #a0602c;
 }
 td.padderbottomright {
 	height: 3px;
-	background-color: #a0c0e0;
-	border-bottom : solid 1px #808080;
-	border-right : solid 1px #808080;
+	background-color: #ab886e;
+	border-bottom : solid 1px #a0602c;
+	border-right : solid 1px #a0602c;
 }
 td.sectionleft {
 	font-size: .9em;
 	font-weight: bold;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	border-left : solid 1px #808080;
+	border-left : solid 1px #a0602c;
 	text-align: right;
-	color: #202060;
-	background-color: #a0c0e0;
+	color: #5d381a;
+	background-color: #cfe3ae;
 }
 td.sectionright {
 	font-size: .9em;
 	font-weight: 100;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	border-right : solid 1px #808080;
-	background-color: #a0c0e0;
+	border-right : solid 1px #a0602c;
+	background-color: #cfe3ae;
 }
 p.searchtitle {
 	font-size: 1.4em;
 	font-weight: bold;
-	color: #f0f0f0;
+	color: #362a1c;
 }
 p.instruct {
 	font-size: .8em;
-	color: #f0f0f0;
+	color: #452111;
 	font-weight: normal;
 	padding-bottom: 7px;
 }
@@ -363,13 +363,13 @@ p.instruct {
 	padding-right: 10px;
 	font-size: .9em;
 	font-weight: normal;
-	color: #204080;
+	color: #336600;
 }
 .searchmatches {
 	padding-right: 15px;
 	font-size: .9em;
 	font-weight: normal;
-	color: #204080;
+	color: #336600;
 }
 .search {
 	padding-right: 5px;
@@ -457,52 +457,56 @@ table.pagenum {
 	margin-left:auto;
 	margin-right:auto;
 	border: 0px;
-	border-top: 2px solid #808080;
+	border-top: 2px solid #452111;
 	margin-top: 30px;
 }
 td.descrip {
-	  color: #f0f0f0;
+	  color: #362a1c;
 	  font-family: arial, sans, helvetica, verdana;
-	  font-size: 9pt;
+	  font-size: 8pt;
 	  font-weight: normal;
-	  padding-bottom: 30px;
-	  padding-top: 30px;
+	  padding-bottom: 15px;
+	  padding-top: 25px;
 	  padding-left: 3px;
 }
 td.commonheader {
-	   color: #404080;
-	   background-color: #e0e0e0;
+	   color: #CFE3AE;
+	   background-color: #452111;
 	   font-family: times-roman new, times, serif;
 	   font-size: 12pt;
 	   font-weight: bold;
 	   border-bottom-style: solid 1px #a0c0e0;
 	   padding-right: 25px;
+	   padding-left: 3px;
 }
 td.sciheader {
-	   color: #404080;
-	   background-color: #e0e0e0;
+	   color: #CFE3AE;
+	   background-color: #452111;
 	   font-family: times-roman new, times, serif;
 	   font-size: 12pt;
 	   font-weight: bold;
 	   font-style: italic;
 	   border-bottom-style: solid 1px #e0e0e0;
+	   padding-left: 3px;
 }
 td.spacerheight {
    height: 10px;
 }
 td.commonname {
-    color: #f0f0f0;
+    color: #336600;
     font-family: helvetica, verdana, arial;
     font-size: 10pt;
     padding-bottom: 7px;
+    padding-left: 3px;
     padding-right: 35px;
 }
 td.sciname {
-    color: #f0f0f0;
+    color: #a0602c;
     font-family: helvetica, verdana, arial;
     font-style: italic;
     font-size: 10pt;
     padding-bottom: 7px;
+    padding-left: 3px;
     padding-right: 35px;
 }
 td.previous {
@@ -528,7 +532,7 @@ td.next {
 td.pagenum {
    font-family: helvetica, verdana, arial;
    font-size: 10pt;
-   color: #f0f0f0;
+   color: #452111;
    margin: 0px;
    padding-top: 10px;
    padding-right: 8px;
@@ -539,39 +543,46 @@ td.pagenum {
    vertical-align: bottom;
 }
 a.commonname1st {
-	  color: #a0c0e0;
+	  color: #336600;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-size: 10pt;
+	  font-weight: bold;
 	  text-align: left;
 	  text-decoration: none;
 }
 a.commonname1st:hover {
-	  color: #202060;
-	  background-color: #a0c0e0;
+	  color: #003300;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-size: 10pt;
+	  font-weight: bold;
 	  text-align: left;
 	  text-decoration: underline;
 }
 a.sciname1st {
-	  color: #a0c0e0;
+	  color: #336600;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-style: italic;
 	  font-size: 10pt;
+	  font-weight: bold;
 	  text-align: left;
 	  text-decoration: none;
 }
 a.sciname1st:hover {
-	  color: #202060;
-	  background-color: #a0c0e0;
+	  color: #003300;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-style: italic;
 	  font-size: 10pt;
+	  font-weight: bold;
 	  text-align: left;
 	  text-decoration: underline;
 }
 a.sciname2nd {
-	  color: #f0f0f0;
+	  color: #a0602c;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-style: italic;
 	  font-size: 10pt;
@@ -579,47 +590,48 @@ a.sciname2nd {
 	  text-decoration: none;
 }
 a.sciname2nd:hover {
-	  color: #f0f0f0;
+	  color: #a0602c;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-style: italic;
 	  font-size: 10pt;
 	  text-align: left;
 	  text-decoration: underline;
-	  background-color: #202060;
 }
 a.commonname2nd {
-	  color: #f0f0f0;
+	  color: #a0602c;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-size: 10pt;
 	  text-align: left;
 	  text-decoration: none;
 }
 a.commonname2nd:hover {
-	  color: #f0f0f0;
+	  color: #a0602c;
+	  background-color: #fff7da;
 	  font-family: helvetica, verdana, arial;
 	  font-size: 10pt;
 	  text-align: left;
 	  text-decoration: underline;
-	  background-color: #202060;
 }
 a.prevnext {
-   color: #a0c0e0;
+   color: #336600;
    text-decoration: none;
-   background-color: #202060;
+   background-color: #fff7da;
 }
 a.prevnext:hover {
-   color: #f0f0f0;
+   color: #fff7da;
    text-decoration: underline;
-   background-color: #202060;
+   background-color: #336600;
 }
 span.sciname {
-	   color: #f0f0f0;
+	   color: #452111;
 	   font-family: helvetica, verdana, arial;
 	   font-style: italic;
 	   font-size: 10pt;
 }
 span.pagenum {
-   color: #f0f0f0;
+   color: #452111;
    font-weight: bold;
 }
 /* style code for List pages ends here */
@@ -800,7 +812,7 @@ li {
 		font-size: 10pt;
 }
 hr {
-		color: #a0c0e0;
+		color: #452111;
 		width: 98%;
 }
 /* style code for Taxon pages ends here */
