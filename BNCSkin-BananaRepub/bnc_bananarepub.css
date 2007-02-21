@@ -379,10 +379,14 @@ p.instruct {
 /* style code for Search page ends here */
 
 /* style code for Search Results starts here */
+body.searchresults {
+	background-color: #CFE3AE;
+}
 table.resultsdisplay {
 	border: 0px;
 	border-collapse: collapse;
 	margin: 0px;
+	margin-left: 20px;
 }
 td.resultsthumb {
 	vertical-align: bottom;
@@ -390,51 +394,58 @@ td.resultsthumb {
 	padding-left: 10px;
 	padding-bottom: 0px;
 	padding-top: 3px;
-	padding-bottom: 2px;
+	padding-bottom: 4px;
 	text-align: center;
-	border-left: 10px solid #202060;
-	border-right: 10px solid #202060;
+	border-left: 10px solid #CFE3AE;
+	border-right: 10px solid #CFE3AE;
 }
 td.resultscaption {
 	font-family: arial, helvetica, sans;
 	color: #f0f0f0;
 	padding-right: 10px;
 	padding-left: 10px;
-	padding-bottom: 4px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	text-align: center;
 	margin-right: 0px;
 	font-size: 12px;
-	background-color: #e0e0e0;
-	border-left: 10px solid #202060;
-	border-right: 10px solid #202060;
-	border-bottom: 8px solid #202060;
+	background-color: #FFF7DA;
+	border-left: 10px solid #CFE3AE;
+	border-right: 10px solid #CFE3AE;
+	border-bottom: 8px solid #CFE3AE;
 }
 td.rowspacer {
 	height: 20px;	
 }
 a.resultscaption {
-	color: #202060;
-	background-color: #e0e0e0;
+	color: #362A1C;
+	background-color: #FFF7DA;
+	text-decoration: none;
 }
 a.resultscaption:hover {
-	color: #406080;
-	background-color: #e0e0e0;
+	color: #452111;
+	background-color: #FFF7DA;
 	text-decoration: underline;
 }
 #numresults {
 	font-family: arial, helvetica, sans;
 	font-weight: bold;
 	font-size: 15px;
-	color: #f0f0f0;
+	color: #362A1C;
 	padding-bottom: 10px;
-	border-bottom: 2px solid #80a0c0;
+	border-bottom: 2px solid #452111;
 	margin-bottom: 10px;
+	margin-left: 20px;
 }
 .num {
-	background-color: #a0c0e0;
-	color: #202060;
+	background-color: #362A1C;
+	color: #FFF7DA;
 	padding: 2px;
 	font-weight: bold;
+	text-align: center;
+}
+img.searchresults {
+	border: 1px solid #452111;
 }
 /* style code for Search Results page ends here */
 
@@ -638,144 +649,149 @@ span.pagenum {
 
 /* style code for Taxon pages starts here */
 table.taxontitle {
-		border: groove 0px #5970FE;
-		background-color: #202060;
-		margin-left: 4px;
-		margin-bottom: 20px;
-		width: 600px;
+	border: ridge 2px #452111;
+	background-color: #F8FCE2;
+	margin-left: 4px;
+	margin-bottom: 20px;
+	width: 600px;
 }
 table.outerimageframe {
-		width: 600px;
-		vertical-align: top;
-		border: 0px;;
+	width: 600px;
+	vertical-align: top;
+	border: 0px;;
 }
 table.imageframe {
-		color: #202060;
-		width: 600px;
-		background-color: #e0e0e0;
-		border: groove 3px #80a0c0;
-		margin-left: 2px;
+	color: #362A1C;
+	width: 600px;
+	background-color: #CFE3AE;
+	border: groove 3px #FAFCE2;
+	margin-left: 2px;
 }
 table.images {
-		border: 0px;
-		text-align: left;
+	border: 0px;
+	text-align: left;
 }
 table.details {
-		color: #f0f0f0;
-		width: 600px;
-		background-color: #202060;
-		border: groove 0px #5970FE;
-		margin-left: 2px;
+	color: #452111;
+	width: 600px;
+	background-color: #FFF7DA;
+	border: groove 0px #5970FE;
+	margin-left: 2px;
 } 
 table.simfam {
-		margin-left: 20px;
-		border-collapse: collapse;
-		border: solid 1px black;
-		width: 90%;
+	margin-left: 20px;
+	border-collapse: collapse;
+	border: solid 1px black;
+	width: 90%;
 }	
 table.taxoncredits {
-		width: 600px;
-		color: #30155A;
-		background-color: #202060;
-		border: groove 0px #5970FE;
-		margin-left: 2px;
+	width: 600px;
+	color: #362A1C;
+	background-color: #F8FCE2;
+	border: groove 2px #452111;
+	margin-left: 2px;
+	vertical-align: middle;
 }
 td.comnametaxon {
-		border-style: none;
-		font-family: "Arial", Verdana, sans-serif;
-		font-weight: bold;
-		font-size:20pt;
-		padding:10px;
-		color: #f0f0f0;
-		align: left;
-		text-align: left;
+	border-style: none;
+	font-family: "Arial", Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 20pt;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	color: #362A1C;
+	align: left;
+	text-align: left;
 }
 td.scinametaxon {
-		border-style: none;
-		font-family: "Times New Roman", Times, serif;			font-size:18pt;
-		padding:10px;
-		color: #f0f0f0;
-		align: left;
-		text-align: left;
+	border-style: none;
+	font-family: "Times New Roman", Times, serif;
+	font-size:18pt;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	color: #362A1C;
+	align: left;
+	text-align: left;
 }
 td.famname {
-		border-style: none;
-		font-family: "Arial", Verdana, sans-serif;			font-size:14pt;
-		padding:10px;
-		color: #f0f0f0;
-		text-align: right;
-		padding-top: 15px;
+	border-style: none;
+	font-family: "Arial", Verdana, sans-serif;
+	font-size:14pt;
+	color: #362A1C;
+	padding-right: 10px;
+	text-align: right;
 }
 td.simfam {
-		padding-top: 5px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-		padding-right: 10px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 11pt; 
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt; 
 }
 td.thumb {
-		background-color: #e0e0e0;
-		padding-bottom: 0px;
-		padding-top: 3px;
-		padding-left: 3px;
-		padding-right: 3px;
-		vertical-align: bottom;
+	background-color: #CFE3AE;
+	padding-bottom: 0px;
+	padding-top: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	vertical-align: bottom;
 }
 td.id_text {
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 8pt;
-		font-weight: normal;
-		text-align: top;
-		color: #202060;
-		padding-top: 0px;
-		padding-bottom: 30px;
-		padding-left: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: top;
+	color: #452111;
+	padding-top: 0px;
+	padding-bottom: 30px;
+	padding-left: 8px;
 }
 img.taxon {
-		vertical-align: text-bottom;
-		border: ridge 4px #e0e0e0;
+	vertical-align: text-bottom;
+	border: ridge 2px #452111;
 }
 img.thumb {
-		padding: 0px;
+	padding: 0px;
 }
 .identification_td {
-		background-color: #202060;
-		padding-top: 5px;
-		padding-left: 5px;
+	background-color: #CFE3AE;
+	padding-top: 5px;
+	padding-left: 5px;
 }
 .id_strong {
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 11pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
 }
 .sc_name {
-		font-family: Arial, Helvetica, sans-serif;
-		font-style:italic;
-		font-size: 11pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size: 11pt;
 }
 .detail_text {
-		color: #f0f0f0;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 12pt;
-		padding-left: 10px;
-		padding-right: 10px;
-		padding-top: 5px;
+	color: #452111;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
 } 
 .photocred {
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:8pt;
-		color: #e0e0e0;
-		text-align: right;
-		padding-right: 3px;
-		padding-bottom: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:8pt;
+	color: #362A1C;
+	text-align: right;
+	padding-right: 3px;
+	padding-bottom: 10px;
 }
 div.thumb {
-		padding-bottom: 0px;
-		padding-top: 4px;
-		padding-left: 4px;
-		padding-right: 4px;
-		border: groove 0px #000;
-		background-color: #e0e0e0;
+	padding-bottom: 0px;
+	padding-top: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	border: groove 0px #000;
+	background-color: #CFE3AE;
 }
 .odd {
 		background-color: #c0c0c0;
@@ -793,11 +809,11 @@ p.taxoncredits {
 		font-family: Arial, Helvetica, sans-serif;
 		font-size:9pt;
 		text-align: left;
-		padding-top: 0px;
+		padding-top: 4px;
 		margin-top: 0px;
 		padding-bottom: 10px;
 		padding-left: 5px;
-		color: #f0f0f0;
+		color: #362A1C;
 }
 ul.taxon {
 		list-style: disc;
@@ -805,7 +821,7 @@ ul.taxon {
 		margin-top: 5px;
 		padding: 0px;
 		padding-left: 10px;
-		color: #f0f0f0;
+		color: #362A1C;
 }
 li {
 		font-family: Arial, Helvetica, sans-serif;
