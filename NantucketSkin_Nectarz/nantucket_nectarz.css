@@ -791,6 +791,10 @@ span.pagenum {
 /* style code for List pages ends here */
 
 /* style code for Taxon pages starts here */
+body.taxonpage {
+	color: #30155A;
+	background-color: #e6d2fb;
+}
 table.taxontitle {
 		border: groove 4px #5970FE;
 		background-color: #f2f1e3;
