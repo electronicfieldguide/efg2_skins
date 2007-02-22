@@ -648,9 +648,13 @@ span.pagenum {
 /* style code for List pages ends here */
 
 /* style code for Taxon pages starts here */
+body.taxonpage {
+	color: #362A1C;
+	background-color: #FFF7DA;
+}
 table.taxontitle {
 	border: ridge 2px #452111;
-	background-color: #F8FCE2;
+	background-color: #cfe3ae;
 	margin-left: 4px;
 	margin-bottom: 20px;
 	width: 600px;
@@ -663,7 +667,7 @@ table.outerimageframe {
 table.imageframe {
 	color: #362A1C;
 	width: 600px;
-	background-color: #CFE3AE;
+	background-color: #F8FCE2;
 	border: groove 3px #FAFCE2;
 	margin-left: 2px;
 }
@@ -675,7 +679,7 @@ table.details {
 	color: #452111;
 	width: 600px;
 	background-color: #FFF7DA;
-	border: groove 0px #5970FE;
+	border: groove 3px #452111;
 	margin-left: 2px;
 } 
 table.simfam {
@@ -687,7 +691,7 @@ table.simfam {
 table.taxoncredits {
 	width: 600px;
 	color: #362A1C;
-	background-color: #F8FCE2;
+	background-color: #cfe3ae;
 	border: groove 2px #452111;
 	margin-left: 2px;
 	vertical-align: middle;
@@ -731,7 +735,7 @@ td.simfam {
 	font-size: 11pt; 
 }
 td.thumb {
-	background-color: #CFE3AE;
+	background-color: #F8FCE2;
 	padding-bottom: 0px;
 	padding-top: 3px;
 	padding-left: 3px;
@@ -791,7 +795,7 @@ div.thumb {
 	padding-left: 4px;
 	padding-right: 4px;
 	border: groove 0px #000;
-	background-color: #CFE3AE;
+	background-color: #F8FCE2;
 }
 .odd {
 		background-color: #c0c0c0;
