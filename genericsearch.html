@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1">
+<head>
+<title>EFG Search</title>
+<link type="text/css" rel="stylesheet" href="nantucket.css" />
+<script language="JavaScript" type="text/javascript">
+<!-- // -->
+//handle other checkboxes that are not the 'any' checkbox
+//if the any checkbox field is checked then uncheck the 'any' checkbox
+//otherwise check the 'any' checkbox
+
+function evalOtherCheckBoxes(field)
+{
+    if(isFieldChecked(field)){
+        field[0].checked = false;
+    }
+    else{
+            field[0].checked = true ;
+    }
+}
+//if some checkBox other than the 'any' checkbox is checked
+//then uncheck them and check the 'any' check box
+//otherwise just check the 'any' checkbox
+//means that if user try's to uncheck the 'any' checkbox if nothing is selected it will not be deselected
+function evalAnyCheckBox(field)
+{
+
+ if(isFieldChecked(field)){
+           for (i = 1; i < field.length; i++){
+            if(field[i].checked){
+                field[i].checked = false;
+            }
+        }
+    }
+    field[0].checked = true;
+}
+// Find out that if any check box but the 'any' checkbox is selected
+
+function isFieldChecked(field){
+    checked = false;
+    for (i = 1; i < field.length; i++){
+        if(field[i].checked){
+            checked = true;
+        }
+    }
+    return checked;
+}
+function isFieldSelected(field){
+    var selected = false;
+    for (i = 1; i < field.length; i++){
+    if(field.options[i].selected == true){
+        selected = true;
+    }
+    }
+    return selected;
+}
+function evalAnySelectedValue(field)
+{ 
+  
+    if(isFieldSelected(field)){
+    field.options[0].selected = false;
+    }
+    else{
+    field.options[0].selected  = true;
+    }
+   
+}
+function toggleDisplayFormat(field,idVar){
+   var selectedIndex = field.selectedIndex;
+   var other = document.getElementById(idVar);
+   other.options[selectedIndex] .selected= true;
+}
+function toggleMax(field,idVar){
+   var text = field.value;
+   var other = document.getElementById(idVar);
+   other.value = text;
+}
+</script>
+</head>
+<body class="search">
+<p class="searchtitle">Search the EFG</p>
+
+<p class="instruct">Select options from any of the categories below, then click "Search" at the bottom of the page.<br />
+<br />
+Selecting more than one option in a category will search for either characteristic (i.e. either "pink" or "white" flowers).<br />
+To select more than one option in a scrolling menu, hold down the Ctrl key on a PC (Command key on a Mac) when you click the mouse button.</p>
+
+<form method="post" action="/efg2/Redirect.jsp" name="myform"><input type="hidden" name="displayName" value="invasives" /> <input type="hidden" name="displayFormat" value="HTML" /> <input type=
+"hidden" name="dataSourceName" value="NantucketSppPgs_1149868625336" /> 
+
+<table class="search">
+<tr>
+<td class="submitsearch"><span class="searchdisplay">Display results as: <select name="searchType" size="1" id="firstSelect" onchange="toggleDisplayFormat(this,lastSelect);" onkeyup=
+"toggleDisplayFormat(this,lastSelect);">
+<option value="plates">Thumbnails</option>
+<option value="lists">Text List</option>
+</select></span> <span class="searchmatches">Maximum Matches: <input type="text" size="4" id="firstMatch" name="maxDisplay" value="70" onchange="toggleMax(this,lastMatch);" onkeyup=
+"toggleMax(this,lastMatch);" /></span> <span class="search"><input type="submit" value="Search" /></span> <span class="clear"><input type="reset" value="Clear all" /></span></td>
+</tr>
+</table>
+
+<table class="searchmodule">
+<tr>
+<td class="paddertopleft"></td>
+<td class="paddertopright"></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="genus" size="5" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Acer
+                   
+</option>
+<option>Achillea
+                   
+</option>
+<option>Aegopodium
+                   
+</option>
+<option>Ailanthus
+                   
+</option>
+<option>Akebia
+                   
+</option>
+<option>Euonymus
+                   
+</option>
+<option>Euphorbia
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="family" size="5" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Aceraceae
+                   
+</option>
+<option>Apiaceae
+                   
+</option>
+<option>Apocynaceae
+                   
+</option>
+<option>Araliaceae
+                   
+</option>
+<option>Asclepiadaceae
+                   
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="degree_of_invasiveness_on_Nantucket" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>Intermediate Invasive
+                   
+</option>
+<option>Invasive
+                   
+</option>
+<option>Likely Invasive
+                   
+</option>
+<option>Potential Invasive
+                   
+</option>
+<option>Roadside Weed
+                   
+</option>
+<option>Watchlist
+                   
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="sectionleft">Field Display Name:</td>
+<td class="sectionright"><select multiple="multiple" name="prohibited_in_Massachusetts_" size="4" onchange="evalAnySelectedValue(this);">
+<option selected="selected" value="EFG_ANY_OPTION">any</option>
+<option>importation ban
+                   
+</option>
+<option>importation ban July 2006
+                   
+</option>
+<option>no
+                   
+</option>
+<option>propagation ban
+                   
+</option>
+<option>propagation ban January 2007
+                   
+</option>
+<option>propagation ban January 2009
+                   
+
+</option>
+</select></td>
+</tr>
+
+<tr>
+<td class="padderbottomleft"></td>
+<td class="padderbottomright"></td>
+</tr>
+
+<tr>
+<td class="spacer"></td>
+<td class="spacer"></td>
+</tr>
+</table>
+
+<table class="search">
+<tr>
+<td class="submitsearch"><span class="searchdisplay">Display results as: <select name="searchType" size="1" id="lastSelect" onchange="toggleDisplayFormat(this,firstSelect);" onkeyup=
+"toggleDisplayFormat(this,firstSelect);">
+<option value="plates">Thumbnails</option>
+<option value="lists">Text List</option>
+</select></span> <span class="searchmatches">Maximum Matches: <input type="text" id="lastMatch" size="4" name="maxDisplay" value="70" onchange="toggleMax(this,firstMatch);" onkeyup=
+"toggleMax(this,firstMatch);" /></span> <span class="search"><input type="submit" value="Search" /></span> <span class="clear"><input type="reset" value="Clear all" /></span></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
