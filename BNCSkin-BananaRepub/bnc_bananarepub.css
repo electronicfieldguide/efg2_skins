@@ -106,7 +106,7 @@ margin-top: 10px;
 td.abouttitle {
 color: #362A1C;
 font-family: arial, helvetica, verdana;
-font-size: 20pt;
+font-size: 16pt;
 text-align: left;
 font-weight: bold;
 padding-bottom: 0px;
@@ -252,6 +252,7 @@ font-size: 12pt;
 font-weight: bold;
 text-align: left;
 text-decoration: none;
+padding-left: 5px;
 }
 p.subscript {
 color: #336600;
