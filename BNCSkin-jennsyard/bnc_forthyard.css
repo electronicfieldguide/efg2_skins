@@ -528,6 +528,17 @@ td.descrip {
 	  padding-top: 25px;
 	  padding-left: 3px;
 }
+td.famheader {
+	color: #002F5D;
+	font-family: helvetica, verdana, arial;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 0px;
+	padding-top: 16px;
+	padding-bottom: 2px;
+	text-transform: uppercase;
+	border-bottom: 1px #362A1C solid;
+}
 td.commonheader {
 	   color: #CFE3AE;
 	   background-color: #002f5d;
@@ -536,7 +547,7 @@ td.commonheader {
 	   font-weight: bold;
 	   border-bottom-style: solid 1px #a0c0e0;
 	   padding-right: 25px;
-	   padding-left: 3px;
+	   padding-left: 30px;
 }
 td.sciheader {
 	   color: #CFE3AE;
@@ -546,7 +557,7 @@ td.sciheader {
 	   font-weight: bold;
 	   font-style: italic;
 	   border-bottom-style: solid 1px #e0e0e0;
-	   padding-left: 3px;
+	   padding-left: 30px;
 }
 td.spacerheight {
    height: 10px;

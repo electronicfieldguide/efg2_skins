@@ -606,9 +606,10 @@ table.header {
 	  margin-right: 0px;
 	  border-collapse: collapse;
 	  border: 0px;
+	width: 90%;
+
 }
 table.specieslist {
-	  width: 100%;
 	  margin-left: 0px;
 	  margin-right: 0px;
 	  border-collapse: collapse; 
@@ -627,9 +628,19 @@ td.descrip {
 	  font-family: arial, sans, helvetica, verdana;
 	  font-size: 9pt;
 	  font-weight: normal;
-	  padding-bottom: 30px;
+	  padding-bottom: 15px;
 	  padding-top: 30px;
 	  padding-left: 3px;
+}
+td.famheader {
+	color: #0000A0;
+	font-family: helvetica, verdana, arial;
+	font-size: 11pt;
+	font-weight: bold;
+	padding-left: 0px;
+	padding-top: 16px;
+	padding-bottom: 2px;
+	text-transform: uppercase;
 }
 td.commonheader {
 	   color: #30155A;
@@ -641,6 +652,7 @@ td.commonheader {
 	   border-bottom-color: #30155A;
 	   border-bottom-width: 1px;
 	   padding-right: 25px;
+	padding-left: 50px;
 }
 td.sciheader {
 	   color: #30155A;
@@ -652,6 +664,7 @@ td.sciheader {
 	   border-bottom-style: solid;
 	   border-bottom-color: #30155A;
 	   border-bottom-width: 1px;
+	padding-left: 50px;
 }
 td.spacerheight {
    height: 10px;
@@ -662,6 +675,7 @@ td.commonname {
     font-size: 10pt;
     padding-bottom: 7px;
     padding-right: 35px;
+	padding-left: 50px;
 }
 td.sciname {
     color: #30155A;
@@ -670,6 +684,7 @@ td.sciname {
     font-size: 10pt;
     padding-bottom: 7px;
     padding-right: 35px;
+	padding-left: 50px;
 }
 td.previous {
    color: #92114b;
