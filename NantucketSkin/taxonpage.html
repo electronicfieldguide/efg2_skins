@@ -24,6 +24,7 @@
 <table class="images">
 <tr>
 <td class="thumb">
+<!-- large thumbnails may break the layout of this page if you have more than 3 thumbnails per taxon and we recommend trying 150px max -->
 <div class="thumb">
 <a href="EFGImages/cbeaton1/IMG_3915_1.jpg"><img class="taxon" alt="Whole Plant" src="http://panda.cs.umb.edu:80/efg2/efgimagesthumbs/cbeaton1/IMG_3915_1.jpg"></a>
 </div>
@@ -177,11 +178,19 @@
 </table>
 <br>
 <hr>
+<!-- Static links go below. There will be a single format for adding links, with an "Add Another Link" button. Only the button should show on the taxon -->
+<p class="link">
+<a class="link" href="http://efg.cs.umb.edu">Sample Link</a>
+<a class="link" href="http://efg.cs.umb.edu/efg">2nd Sample Link</a>
+</p>
+<!-- The section below is only for the template entry page and can be removed from the HTML sample -->
+<p class="link"><input type="text" name="email" size="20" maxlength="19" value="button text"><input type="text" name="email" size="40" maxlength="39" value="URL"><input class="addlink" name="Add new link" value="Add new link" onclick="javascript:AddCaptionRow('CreateMoreFieldRows.jsp','spanabovebuttonid','captionaboveid','numberofcaptionsaboveid')" type="button">
+</p>
+<hr>
 <br>
 <table class="taxoncredits">
 <tr>
 <td>
-
 <p class="taxoncredits">
 <strong>Credits: </strong>The Electronic Field Guide to the Invasive Plants of Nantucket (c) 2005-2006 Maria Mitchell Association, EFG Project, UMass Boston</p>
 </td>
