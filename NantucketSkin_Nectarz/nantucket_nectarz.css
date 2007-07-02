@@ -983,4 +983,44 @@ hr {
 		color: #8E1852;
 		width: 98%;
 }
+p.link {
+padding-left: 10px;
+}
+a.link, a.link:visited, a.link:active {
+background-color: #D0EDFD;
+color: #000000;
+font-weight: bold;
+padding: 3px;
+margin-right: 10px;
+border-top: 2px solid #f3f3f3;
+border-left: 2px solid #f3f3f3;
+border-bottom: 2px solid #4a4a4a;
+border-right: 2px solid #4a4a4a;
+}
+a.link:hover {
+background-color: #CCFFFF;
+color: #000000;
+font-weight: bold;
+padding: 3px;
+border-bottom: 2px solid #f3f3f3;
+border-right: 2px solid #f3f3f3;
+border-top: 2px solid #4a4a4a;
+border-left: 2px solid #4a4a4a;
+}
+input.addlink {
+background-color: #e6d2fb;
+border: 0px #333333 groove;
+font-weight: bold;
+font-size: 10pt;
+text-decoration: underline;
+margin-bottom: -3px;
+color: #006633;
+}
+input.addlink:hover {
+color: #009933;
+background-color: #e6d2fb;
+border: 0px groove #333333;
+outline: 0px solid #333333;
+text-decoration: none;
+}
 /* style code for Taxon pages ends here */
