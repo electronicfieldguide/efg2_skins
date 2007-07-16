@@ -426,6 +426,11 @@ font-size: 8pt;
 text-align: left;
 text-decoration: none;
 }
+div.glossaryicon {
+float: left;
+padding-top: 1px;
+padding-right: 5px;
+}
 /* end of style code for About, Acknowledgement, FAQ and Glossary pages */
 
 /* style code for Search page starts here */
